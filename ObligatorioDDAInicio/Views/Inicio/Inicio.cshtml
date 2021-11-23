@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "Bienvenido";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Mi aplicación ASP.NET</title>
+</head>
+<body>
+    @using (Html.BeginForm("Envios", "Inicio"))
+    {
+        @Html.AntiForgeryToken()
+
+        <div style="margin-auto; text-align: center;">
+            <b style="font-size:50px;"> Distribuidora Africana de Kenia </b>
+            <br />
+            <hr />
+
+            <br /><br /><br />
+            <input type="button" value="Detalles de envio" style="font-size:30px; width:350px; height:80px;" />
+            <br /><br /><br />
+            <a href="https://localhost:44327/">
+                <input type="button" value="Sistema de envios" style="font-size:30px; width:350px; height:80px;" />
+            </a>
+        </div>
+
+
+
+    }
+</body>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+
