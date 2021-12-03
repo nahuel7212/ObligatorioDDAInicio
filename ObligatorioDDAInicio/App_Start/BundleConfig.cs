@@ -25,6 +25,9 @@ namespace ObligatorioDDAInicio
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+            bundles.Add(new ScriptBundle("~/bundles/UbicacionJS").Include(
+                    "~/Scripts/UbicacionJS.js"));
         }
     }
 }
