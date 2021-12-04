@@ -14,7 +14,6 @@ namespace ObligatorioDDAInicio.Controllers
         {
             return View();
         }
-
         public JsonResult GetUbicacion(Tracking tracking)
         {
             LUbicacionController ubicacionController = new LUbicacionController();
@@ -27,9 +26,6 @@ namespace ObligatorioDDAInicio.Controllers
             tracking = LocationEnKenia(tracking);
             return Json(tracking, JsonRequestBehavior.AllowGet);
         }
-
-
-
         public Tracking LocationEnKenia(Tracking tracking)
         {
             int random = new Random().Next(10);
@@ -82,7 +78,5 @@ namespace ObligatorioDDAInicio.Controllers
 
             return tracking;
         }
-
-
     }
 }
